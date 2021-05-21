@@ -2,6 +2,7 @@ myFold :: (a -> b -> b) -> b -> [a] -> b
 myFold _ b [] = b
 myFold f b (a : as) = myFold f (f a b) as
 
+mySum :: [a] -> a
 mySum = myFold (+) 0
 
 main :: IO ()
